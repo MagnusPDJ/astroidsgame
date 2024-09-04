@@ -4,11 +4,11 @@ from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
+from score import Score
+
 
 def main():
     print("Starting asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
 
     pygame.init()
     clock = pygame.time.Clock()
@@ -28,6 +28,7 @@ def main():
     Player.containers = (updatable, drawable)
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
     
+    score = Score()
 
     while True:
         for event in pygame.event.get():
@@ -40,11 +41,13 @@ def main():
         for asteroid in asteroids:
             if asteroid.check_for_collision(player):
                 print("Game over!")
+                print(f"Your score was: {score.get_score()}!")
                 exit()
             for shot in shots:
                 if asteroid.check_for_collision(shot):
                     shot.kill()
                     asteroid.split()
+                    score.add_points(asteroid.radius)
 
         screen.fill((0,0,0))
 
