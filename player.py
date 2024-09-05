@@ -4,7 +4,6 @@ from constants import *
 from shot import Shot
 
 class Player(CircleShape):
-
     def __init__(self, x, y):
         super().__init__(x, y, PLAYER_RADIUS)
         self.rotation = 0
@@ -40,7 +39,14 @@ class Player(CircleShape):
             self.timer -= dt
             if self.timer < 0:
                 self.timer = 0
-
+        if self.position.x < 0:
+            self.position.x = SCREEN_WIDTH
+        if self.position.x > SCREEN_WIDTH:
+            self.position.x = 0
+        if self.position.y < 0:
+            self.position.y = SCREEN_HEIGHT
+        if self.position.y > SCREEN_HEIGHT:
+            self.position.y = 0
         keys = pygame.key.get_pressed()
         
         if keys[pygame.K_a]:
