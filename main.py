@@ -44,7 +44,7 @@ def main():
             update.update(dt)
         
         for asteroid in asteroids:
-            if asteroid.check_for_collision(player):
+            if asteroid.check_for_collision2(player):
 #                print("Game over!")
 #                print(f"Your score was: {score.get_score()}!")
 #                exit()
