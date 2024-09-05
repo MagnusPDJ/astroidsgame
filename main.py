@@ -12,9 +12,9 @@ def main():
     pygame.init()
     clock = pygame.time.Clock()
     dt = 0
-    pygame.display.set_caption("Asteroids!")
 
     pygame.display.quit()
+    pygame.display.set_caption("Asteroids!")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     
     updatable = pygame.sprite.Group()
