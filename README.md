@@ -8,3 +8,10 @@
 
 ## Lav en mappe som hedder pygames ved at skrive `mkdir pygames` og naviger ind i mappen med `cd pygames`, det er gjort rigtigt hvis din sti ændre sig som vist med rødt:
 ![image](https://github.com/user-attachments/assets/27e2c567-691a-4543-a7d1-ee9d939b623c)
+
+## Nu kan du downloade source code under release og putte det i din pygames mappe:
+![image](https://github.com/user-attachments/assets/4bc1ac9f-4f23-4ce2-801c-68d2e57e4a1f)
+
+## Tilbage i Windows Powershell kan du naviger til snake mappen `cd astroidsgame-1.x.x` eller hvis du kom til at lukke PowerShell `cd pygames\astroidsgame-1.x.x` derefter skriv `python main.py` og tryk enter, spillet burde derefter starte op:
+![image](https://github.com/user-attachments/assets/9462ffa8-c688-4d42-a490-3e920d962495)
+
